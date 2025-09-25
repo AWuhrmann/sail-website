@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPFL Safe AI Lausanne</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #ff0000;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+        
+        .section {
+            margin-bottom: 80px;
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            color: #ff0000;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .section p {
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: #666;
+        }
+        
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #ff0000;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .card h3 {
+            color: #ff0000;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .card p {
+            color: #666;
+            font-size: 1rem;
+            text-align: left;
+            margin: 0;
+        }
+        
+        /* Events Section */
+        .events {
+            background: #f8f8f8;
+            padding: 60px 0;
+        }
+        
+        .event-item {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #ff0000;
+        }
+        
+        .event-date {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .event-title {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            color: #333;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: #ff0000;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            color: white;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            text-align: center;
+        }
+        
+        .contact-item h3 {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section h2 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#home" class="logo">EPFL Safe AI</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#reading-group">Reading Group</a></li>
+                <li><a href="#projects">Semester Projects</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>EPFL Safe AI Lausanne</h1>
+            <p>Building a safer future through responsible AI development and research. We are a community of students, researchers, and professionals at EPFL working towards ensuring artificial intelligence systems are developed safely and beneficially.</p>
+            <a href="#contact" class="cta-button">Get Involved!</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="section">
+            <h2>Our Mission</h2>
+            <p>We believe that as AI systems become more powerful, ensuring their safety and alignment with human values becomes increasingly critical. Our goal is to foster research, education, and community engagement around AI safety at EPFL and beyond.</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>🧠 Research & Discussion</h3>
+                    <p>Regular discussions about cutting-edge AI safety research, alignment techniques, and the implications of advanced AI systems for society.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>📚 Education</h3>
+                    <p>We organize workshops, seminars, and study groups to help members understand the technical foundations of AI safety research.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🤝 Community</h3>
+                    <p>Connect with like-minded individuals, collaborate on projects, and contribute to the growing AI safety research community at EPFL.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🔬 Hands-on Projects</h3>
+                    <p>Work on practical AI safety research projects, from interpretability studies to robustness evaluations and alignment techniques.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reading-group" class="section">
+            <h2>Reading Group</h2>
+            <p>Our weekly reading group meets to discuss the latest papers in AI safety, alignment, and related fields. We cover both foundational work and cutting-edge research.</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>📅 Weekly Meetings</h3>
+                    <p>Every Thursday, 18:00-19:30 in BC 420. We alternate between paper presentations and open discussions on current AI safety topics.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>📖 Paper Selection</h3>
+                    <p>We focus on papers from top venues like NeurIPS, ICML, ICLR, and specialized AI safety conferences. Members can suggest papers for discussion.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🎯 Focus Areas</h3>
+                    <p>Interpretability, robustness, alignment, reward modeling, scalable oversight, and other key areas of AI safety research.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Semester Projects</h2>
+            <p>Gain hands-on experience with AI safety research through structured semester projects. Work individually or in teams under the guidance of experienced researchers.</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>🔍 Interpretability Studies</h3>
+                    <p>Investigate how neural networks make decisions using techniques like activation patching, probing, and mechanistic interpretability.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🛡️ Robustness Evaluation</h3>
+                    <p>Study adversarial robustness, distribution shifts, and out-of-distribution detection in modern AI systems.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>⚖️ Alignment Research</h3>
+                    <p>Work on preference learning, reward modeling, and techniques for aligning AI systems with human values.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>📊 Evaluation Frameworks</h3>
+                    <p>Develop benchmarks and evaluation metrics for assessing AI safety properties in various domains.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="events" class="events">
+        <div class="container">
+            <h2 style="color: #ff0000;">Upcoming Events</h2>
+            
+            <div class="event-item">
+                <div class="event-date">October 10, 2025</div>
+                <div class="event-title">AI Safety Workshop: Introduction to Mechanistic Interpretability</div>
+                <p>Learn the fundamentals of understanding how neural networks work internally. Hands-on session with transformer circuits.</p>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">October 24, 2025</div>
+                <div class="event-title">Guest Lecture: Dr. Sarah Chen on Constitutional AI</div>
+                <p>Renowned researcher from Anthropic will discuss the latest developments in training AI systems to be helpful, harmless, and honest.</p>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">November 7, 2025</div>
+                <div class="event-title">AI Safety Hackathon</div>
+                <p>48-hour hackathon focused on building tools and techniques for AI safety. Prizes for most innovative safety solutions.</p>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">November 21, 2025</div>
+                <div class="event-title">Panel Discussion: AI Governance and Policy</div>
+                <p>Industry experts and policymakers discuss the regulatory landscape and governance challenges for advanced AI systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Join our community and contribute to making AI safer for everyone. We welcome students, researchers, and anyone interested in AI safety.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:safe-ai@epfl.ch">safe-ai@epfl.ch</a>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>Slack</h3>
+                    <a href="#">Join our workspace</a>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>Meetings</h3>
+                    <p>BC 420, Thursdays 18:00</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>Mailing List</h3>
+                    <a href="#">Subscribe for updates</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 EPFL Safe AI Lausanne. Building safer AI systems together.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 0, 0, 0.95)';
+            } else {
+                header.style.backgroundColor = '';
+            }
+        });
+    </script>
+</body>
+</html>

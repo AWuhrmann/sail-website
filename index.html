@@ -280,7 +280,7 @@
         <nav class="container">
             <div style="display: flex; align-items: center; gap: 1rem;">
                 <img src="./assets/logo.png" alt="EPFL Safe AI Logo" class="logo-img">
-                <a href="#home" class="logo">EPFL Safe AI</a>
+                <a href="#home" class="logo">EPFL Safe AI Lausanne</a>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -307,13 +307,13 @@
             
             <div class="cards-grid">
                 <div class="card">
-                    <h3>🧠 Research & Discussion</h3>
-                    <p>Regular discussions about cutting-edge AI safety research, alignment techniques, and the implications of advanced AI systems for society.</p>
+                    <h3>📚 Reading group</h3>
+                    <p>We host a reading group on EPFL campus every other Wednesday starting October 8th. Please register following <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAic5NIrSDg-z8-7EEc2a6ehbipBMnPbQ8eAP1AoIYEtiAAg/viewform?usp=header" target="_blank">this link</a>.</p>
                 </div>
                 
                 <div class="card">
-                    <h3>📚 Education</h3>
-                    <p>We organize workshops, seminars, and study groups to help members understand the technical foundations of AI safety research.</p>
+                    <h3>🧠 Research & Discussion</h3>
+                    <p>We organize workshops, seminars, and we do independent research to help members understand the technical foundations of AI safety research.</p>
                 </div>
                 
                 <div class="card">
@@ -335,45 +335,58 @@
             <div class="cards-grid">
                 <div class="card">
                     <h3>📅 Weekly Meetings</h3>
-                    <p>Every Thursday, 18:00-19:30 in BC 420. We alternate between paper presentations and open discussions on current AI safety topics.</p>
+                    <p>Every other Wednesday, 18:30-20:00 in AI Center Lounge. We alternate between paper presentations and open discussions on current AI safety topics.</p>
                 </div>
                 
                 <div class="card">
                     <h3>📖 Paper Selection</h3>
-                    <p>We focus on papers from top venues like NeurIPS, ICML, ICLR, and specialized AI safety conferences. Members can suggest papers for discussion.</p>
+                    <p>We focus on high-impact papers from top venues. Members can suggest papers for discussion.</p>
                 </div>
                 
                 <div class="card">
                     <h3>🎯 Focus Areas</h3>
-                    <p>Interpretability, robustness, alignment, reward modeling, scalable oversight, and other key areas of AI safety research.</p>
+                    <p>Interpretability, robustness, alignment, reward modeling, scalable oversight, societal impact, and other key areas of AI safety research.</p>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="section">
-            <h2>Semester Projects</h2>
+            <h2>Past projects (Spring 2025)</h2>
             <p>Gain hands-on experience with AI safety research through structured semester projects. Work individually or in teams under the guidance of experienced researchers.</p>
             
             <div class="cards-grid">
                 <div class="card">
-                    <h3>🔍 Interpretability Studies</h3>
-                    <p>Investigate how neural networks make decisions using techniques like activation patching, probing, and mechanistic interpretability.</p>
+                    <h3>🔍 OS-Harm</h3>
+                    <p><strong>SAIL Authors:</strong> Thomas Kuntz, Agatha Duzan</p>
+                    <p><strong>Lab:</strong> Theory of Machine Learning Laboratory (TML)</p>
+                    <p>Created a harmful capabilities benchmark for agents. Got accepted as a spotlight paper at NeurIPS 2025</p>
+                    <p><a href="https://arxiv.org/abs/2506.14866" target="_blank">🔗 ArXiv</a></p>
                 </div>
                 
                 <div class="card">
-                    <h3>🛡️ Robustness Evaluation</h3>
-                    <p>Study adversarial robustness, distribution shifts, and out-of-distribution detection in modern AI systems.</p>
+                    <h3>🔍 Watermarking for LLMs</h3>
+                    <p><strong>SAIL Author:</strong> Joshua Cohen-Dumani</p>
+                    <p><strong>Lab:</strong> Natural Language Processing Lab (NLP)</p>
+                    <p>This project explored synthetic text detection in open-source language models by studying whether watermarking patterns can be learned directly through fine-tuning. To do so, we built a research pipeline that generated custom datasets, applied contrastive training, and evaluated detectability using automated and model-based methods. The work contributes to understanding how watermarking could help mitigate misuse and disinformation in widely available LLMs. </p>
+                </div>
+
+                <div class="card">
+                    <h3>🔍 Toxicity in LLMs</h3>
+                    <p><strong>SAIL Author:</strong> Léo Gabriel Paoletti</p>
+                    <p><strong>Lab:</strong> Natural Language Processing Lab (NLP)</p>
+                    <p>Investigated the existence and cross-model transferability of multilingual prompts that evade toxicity detection yet trigger toxic outputs in LLMs. Benchmarked Apertus and identified limitations in state-of-the-art jailbreak and toxicity detection systems. </p>
+                </div>
+
+                <div class="card">
+                    <h3>🔍 Memorization in LLMs</h3>
+                    <p><strong>SAIL Author:</strong> Arthur Wuhrmann</p>
+                    <p><strong>Lab:</strong> Natural Language Processing Lab (NLP)</p>
+                    <p>Investigated how perplexity can help to detect verbatim memorization in LLMs output by identifying low-perplexity regions in generated text. We developed an open-source tool for </p>
+                    <p><a href="https://arxiv.org/abs/2507.01844" target="_blank">🔗 ArXiv</a> and <a href="https://github.com/Reliable-Information-Lab-HEVS/ACL-2025-Low-perplexity-LLM-generated-sequences" target="_blank">🔗 Code link</a></p>
                 </div>
                 
-                <div class="card">
-                    <h3>⚖️ Alignment Research</h3>
-                    <p>Work on preference learning, reward modeling, and techniques for aligning AI systems with human values.</p>
-                </div>
-                
-                <div class="card">
-                    <h3>📊 Evaluation Frameworks</h3>
-                    <p>Develop benchmarks and evaluation metrics for assessing AI safety properties in various domains.</p>
-                </div>
+
+
             </div>
         </section>
     </main>
@@ -383,27 +396,21 @@
             <h2 style="color: #ff0000;">Upcoming Events</h2>
             
             <div class="event-item">
-                <div class="event-date">October 10, 2025</div>
-                <div class="event-title">AI Safety Workshop: Introduction to Mechanistic Interpretability</div>
-                <p>Learn the fundamentals of understanding how neural networks work internally. Hands-on session with transformer circuits.</p>
+                <div class="event-date">October 8th, 2025</div>
+                <div class="event-title">Reading group #1</div>
+                <p>Paper : <a href="https://aigi.ox.ac.uk/wp-content/uploads/2025/07/Cot_Is_Not_Explainability.pdf">Chain-of-Thought Is Not Explainability</a></p>
             </div>
             
             <div class="event-item">
-                <div class="event-date">October 24, 2025</div>
-                <div class="event-title">Guest Lecture: Dr. Sarah Chen on Constitutional AI</div>
-                <p>Renowned researcher from Anthropic will discuss the latest developments in training AI systems to be helpful, harmless, and honest.</p>
+                <div class="event-date">October 22th, 2025</div>
+                <div class="event-title">Reading group #2</div>
+                <p>Paper : TBD</p>
             </div>
             
             <div class="event-item">
-                <div class="event-date">November 7, 2025</div>
+                <div class="event-date">October 31th-November 2nd, 2025</div>
                 <div class="event-title">AI Safety Hackathon</div>
-                <p>48-hour hackathon focused on building tools and techniques for AI safety. Prizes for most innovative safety solutions.</p>
-            </div>
-            
-            <div class="event-item">
-                <div class="event-date">November 21, 2025</div>
-                <div class="event-title">Panel Discussion: AI Governance and Policy</div>
-                <p>Industry experts and policymakers discuss the regulatory landscape and governance challenges for advanced AI systems.</p>
+                <p>48-hour hackathon focused on developing predictive models and forecasting methodologies to anticipate AI development timelines and capability advancements.</p>
             </div>
         </div>
     </section>
@@ -416,30 +423,30 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <h3>Email</h3>
-                    <a href="mailto:safe-ai@epfl.ch">safe-ai@epfl.ch</a>
+		    <a href="mailto:lausanne@aisafety.ch">lausanne@aisafety.ch</a>
                 </div>
                 
                 <div class="contact-item">
-                    <h3>Slack</h3>
-                    <a href="#">Join our workspace</a>
+                    <h3>Telegram</h3>
+                    <a href="https://t.me/+5KQ7sfHT51I4Mzhk">Join our community</a>
+                </div>
+
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/company/safe-ai-lausanne/">Follow our LinkedIn</a>
                 </div>
                 
                 <div class="contact-item">
                     <h3>Meetings</h3>
-                    <p>BC 420, Thursdays 18:00</p>
-                </div>
-                
-                <div class="contact-item">
-                    <h3>Mailing List</h3>
-                    <a href="#">Subscribe for updates</a>
-                </div>
+                    <p>BC Cafeteria, Friday 12pm-1pm</p>
+                </div>    
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 EPFL Safe AI Lausanne. Building safer AI systems together.</p>
+            <p>&copy; 2025 EPFL Safe AI Lausanne. Promoting research and interest in AI Safety.</p>
         </div>
     </footer>
 

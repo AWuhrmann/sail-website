@@ -5,34 +5,6 @@ upcoming:
     description: "48-hour hackathon focused on developing predictive models and forecasting methodologies to anticipate AI development timelines and capability advancements."
     location: "EPFL Campus"
     type: "hackathon"
-    
-  - date: "2025-11-06"
-    title: "Reading Group #3"
-    description: "Paper discussion session"
-    location: "AI Center Lounge"
-    time: "18:30-20:00"
-    type: "reading_group"
-    
-  - date: "2025-11-20"
-    title: "Reading Group #4"
-    description: "Paper discussion session"
-    location: "AI Center Lounge"
-    time: "18:30-20:00"
-    type: "reading_group"
-    
-  - date: "2025-12-04"
-    title: "Reading Group #5"
-    description: "Paper discussion session"
-    location: "AI Center Lounge"
-    time: "18:30-20:00"
-    type: "reading_group"
-
-  - date: "2025-12-18"
-    title: "Reading Group #6 - End of Semester"
-    description: "Final reading group session before winter break"
-    location: "AI Center Lounge"
-    time: "18:30-20:00"
-    type: "reading_group"
 
 past:
   - date: "2025-10-08"
@@ -55,8 +27,8 @@ regular_meetings:
     time: "12:00-13:00"
     location: "BC Cafeteria"
     description: "Weekly informal meetups"
-    
-  - day: "Wednesday (bi-weekly)"
-    time: "18:30-20:00"
-    location: "AI Center Lounge"
-    description: "Reading group sessions"
+
+reading_group_interest:
+  status: "gathering_interest"
+  description: "We ran successful reading group sessions in Fall 2024 and are gauging interest for future sessions. If there's enough interest, we'll restart in the coming semester."
+  interest_form_url: "https://docs.google.com/forms/d/e/1FAIpQLSeAic5NIrSDg-z8-7EEc2a6ehbipBMnPbQ8eAP1AoIYEtiAAg/viewform?usp=header"

@@ -1,0 +1,106 @@
+---
+layout: default
+title: "Home"
+description: "Building a safer future through responsible AI development and research. A community at EPFL working towards safe and beneficial AI systems."
+---
+
+<section class="hero">
+    <div class="container">
+        <h1>EPFL Safe AI Lausanne</h1>
+        <p>Building a safer future through responsible AI development and research. We are a community of students, researchers, and professionals at EPFL working towards ensuring artificial intelligence systems are developed safely and beneficially.</p>
+        <a href="{{ '/contact/' | relative_url }}" class="cta-button">Get Involved!</a>
+    </div>
+</section>
+
+<main class="container">
+    <section class="section">
+        <h2>Our Mission</h2>
+        <p>We believe that as AI systems become more powerful, ensuring their safety and alignment with human values becomes increasingly critical. Our goal is to foster research, education, and community engagement around AI safety at EPFL and beyond.</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <h3>📚 Reading Group</h3>
+                <p>We ran successful reading group sessions in Fall 2024 and are planning future sessions based on community interest. Join our interest list to be notified when we restart!</p>
+                <p><a href="{{ '/reading-group/' | relative_url }}">Show interest →</a></p>
+            </div>
+            
+            <div class="card">
+                <h3>🧠 Research & Discussion</h3>
+                <p>We organize workshops, seminars, and conduct independent research to help members understand the technical foundations of AI safety research.</p>
+            </div>
+            
+            <div class="card">
+                <h3>🤝 Community</h3>
+                <p>Connect with like-minded individuals, collaborate on projects, and contribute to the growing AI safety research community at EPFL.</p>
+                <p><a href="{{ '/contact/' | relative_url }}">Join us →</a></p>
+            </div>
+            
+            <div class="card">
+                <h3>🔬 Hands-on Projects</h3>
+                <p>Work on practical AI safety research projects, from interpretability studies to robustness evaluations and alignment techniques.</p>
+                <p><a href="{{ '/projects/' | relative_url }}">View projects →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Recent Highlights</h2>
+        <div class="cards-grid">
+            {% for project in site.data.projects.sail_projects limit:2 %}
+            <div class="card">
+                <h3>{{ project.title }}</h3>
+                <p><strong>Authors:</strong> {{ project.authors }}</p>
+                <p><strong>Lab:</strong> {{ project.lab }}</p>
+                <p>{{ project.description | truncate: 120 }}</p>
+                {% if project.arxiv_url %}
+                    <p><a href="{{ project.arxiv_url }}" target="_blank">📄 Read paper</a></p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ '/projects/' | relative_url }}" class="cta-button">View All Projects</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Upcoming Events</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            {% assign upcoming_events = site.data.events.upcoming | sort: 'date' %}
+            {% for event in upcoming_events limit:3 %}
+            <div class="event-item">
+                <div class="event-date">
+                    {% assign event_date = event.date | date: "%B %d, %Y" %}
+                    {% if event.end_date %}
+                        {% assign end_date = event.end_date | date: "%B %d, %Y" %}
+                        {{ event_date }} - {{ end_date }}
+                    {% else %}
+                        {{ event_date }}
+                    {% endif %}
+                    {% if event.time %} • {{ event.time }}{% endif %}
+                </div>
+                <div class="event-title">{{ event.title }}</div>
+                <p>{{ event.description }}</p>
+                {% if event.location %}<p><strong>Location:</strong> {{ event.location }}</p>{% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ '/events/' | relative_url }}" class="cta-button">View All Events</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Regular Meetings</h2>
+        <div class="cards-grid">
+            {% for meeting in site.data.events.regular_meetings %}
+            <div class="card">
+                <h3>{{ meeting.day }}</h3>
+                <p><strong>Time:</strong> {{ meeting.time }}</p>
+                <p><strong>Location:</strong> {{ meeting.location }}</p>
+                <p>{{ meeting.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>

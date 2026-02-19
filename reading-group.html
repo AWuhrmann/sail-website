@@ -43,25 +43,29 @@ description: "Join our bi-weekly AI safety reading group at EPFL. Discuss cuttin
     </section>
 
     <section class="section">
-        <h2>How to Join</h2>
+        <h2>Show Your Interest</h2>
         <div style="background: #fff3f3; padding: 2rem; border-radius: 10px; border-left: 4px solid #ff0000; max-width: 800px; margin: 0 auto;">
-            <h3 style="color: #ff0000; margin-top: 0;">Registration Required</h3>
-            <p>To ensure we have enough space and materials, please register using the form below. You'll receive email updates about upcoming sessions, paper selections, and any schedule changes.</p>
+            <h3 style="color: #ff0000; margin-top: 0;">Planning Next Sessions</h3>
+            <p>{{ site.data.events.reading_group_interest.description }}</p>
+            
+            <p><strong>Help us plan:</strong> Fill out our interest form so we know when to schedule sessions, what topics to focus on, and how to structure the group.</p>
             
             <div style="text-align: center; margin-top: 1.5rem;">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAic5NIrSDg-z8-7EEc2a6ehbipBMnPbQ8eAP1AoIYEtiAAg/viewform?usp=header" target="_blank" class="cta-button">Register Now</a>
+                <a href="{{ site.data.events.reading_group_interest.interest_form_url }}" target="_blank" class="cta-button">Show Interest</a>
             </div>
             
-            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Already registered? Join our <a href="https://t.me/+5KQ7sfHT51I4Mzhk" target="_blank">Telegram group</a> for discussions and updates.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Join our <a href="https://t.me/+5KQ7sfHT51I4Mzhk" target="_blank">Telegram group</a> for updates and discussions.</p>
         </div>
     </section>
 
     <section class="section">
-        <h2>Upcoming Sessions</h2>
+        <h2>Previous Sessions (Fall 2024)</h2>
+        <p>Here's what we covered in our previous reading group sessions to give you an idea of our discussions:</p>
+        
         <div style="max-width: 800px; margin: 0 auto;">
-            {% assign reading_group_events = site.data.events.upcoming | where: "type", "reading_group" | sort: 'date' %}
-            {% for event in reading_group_events %}
-            <div class="event-item">
+            {% assign past_reading_group = site.data.events.past | where: "type", "reading_group" | sort: 'date' | reverse %}
+            {% for event in past_reading_group %}
+            <div class="event-item" style="opacity: 0.9;">
                 <div class="event-date">
                     {{ event.date | date: "%B %d, %Y" }} • {{ event.time }}
                 </div>
@@ -69,33 +73,20 @@ description: "Join our bi-weekly AI safety reading group at EPFL. Discuss cuttin
                 <p>{{ event.description }}</p>
                 <p><strong>Location:</strong> {{ event.location }}</p>
                 {% if event.paper_url %}
-                <p><a href="{{ event.paper_url }}" target="_blank">📄 Read the paper</a></p>
-                {% endif %}
-            </div>
-            {% endfor %}
-        </div>
-    </section>
-
-    <section class="section">
-        <h2>Previous Sessions</h2>
-        <p>Catch up on what we've discussed in previous sessions:</p>
-        
-        <div style="max-width: 800px; margin: 0 auto;">
-            {% assign past_reading_group = site.data.events.past | where: "type", "reading_group" | sort: 'date' | reverse %}
-            {% for event in past_reading_group %}
-            <div class="event-item" style="opacity: 0.8;">
-                <div class="event-date">
-                    {{ event.date | date: "%B %d, %Y" }}
-                </div>
-                <div class="event-title">{{ event.title }}</div>
-                <p>{{ event.description }}</p>
-                {% if event.paper_url %}
                 <p><a href="{{ event.paper_url }}" target="_blank">📄 Paper: Chain-of-Thought Is Not Explainability</a></p>
                 {% endif %}
             </div>
             {% endfor %}
         </div>
+        
+        <div style="background: #f8f8f8; padding: 2rem; border-radius: 10px; margin-top: 2rem; text-align: center;">
+            <h3>Want More Sessions Like These?</h3>
+            <p>Show your interest and we'll organize more reading group sessions based on demand!</p>
+            <a href="{{ site.data.events.reading_group_interest.interest_form_url }}" target="_blank" class="cta-button">Express Interest</a>
+        </div>
     </section>
+
+    <!-- Previous Sessions section moved above -->
 
     <section class="section">
         <h2>Suggested Reading</h2>

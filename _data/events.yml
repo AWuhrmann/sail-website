@@ -1,4 +1,12 @@
 upcoming:
+  - date: "2025-03-05"
+    title: "SAIL Spring 2025 Kickoff"
+    description: "Join us for the official kickoff of our Spring 2025 activities! Meet the team, learn about upcoming projects and opportunities, and connect with fellow AI safety enthusiasts."
+    location: "Room CE 1 104, EPFL"
+    time: "18:30"
+    type: "kickoff"
+    registration_url: "https://luma.com/event/manage/evt-gYX0pFffKH5bBVB"
+    
   - date: "2025-10-31"
     end_date: "2025-11-02"
     title: "AI Safety Hackathon"

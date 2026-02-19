@@ -68,7 +68,7 @@ description: "Building a safer future through responsible AI development and res
         <div style="max-width: 800px; margin: 0 auto;">
             {% assign upcoming_events = site.data.events.upcoming | sort: 'date' %}
             {% for event in upcoming_events limit:3 %}
-            <div class="event-item">
+            <div class="event-item"{% if event.type == 'kickoff' %} style="border-left: 6px solid #ff0000; background: linear-gradient(90deg, #fff3f3, white);"{% endif %}>
                 <div class="event-date">
                     {% assign event_date = event.date | date: "%B %d, %Y" %}
                     {% if event.end_date %}
@@ -79,9 +79,16 @@ description: "Building a safer future through responsible AI development and res
                     {% endif %}
                     {% if event.time %} • {{ event.time }}{% endif %}
                 </div>
-                <div class="event-title">{{ event.title }}</div>
+                <div class="event-title">{{ event.title }}{% if event.type == 'kickoff' %} 🚀{% endif %}</div>
                 <p>{{ event.description }}</p>
                 {% if event.location %}<p><strong>Location:</strong> {{ event.location }}</p>{% endif %}
+                {% if event.registration_url %}
+                    <p style="margin-top: 1rem;">
+                        <a href="{{ event.registration_url }}" target="_blank" style="background: #ff0000; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block;">
+                            🎟️ Register on Luma
+                        </a>
+                    </p>
+                {% endif %}
             </div>
             {% endfor %}
         </div>

@@ -38,6 +38,7 @@ description: "Upcoming AI safety events, reading groups, and workshops at EPFL S
                     <div class="event-title">{{ event.title }}</div>
                     <p>{{ event.description }}</p>
                     {% if event.location %}<p><strong>Location:</strong> {{ event.location }}</p>{% endif %}
+                    {% if event.registration_url %}<p><a href="{{ event.registration_url }}" target="_blank" style="background: #ff0000; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: bold;">🎟️ Register on Luma</a></p>{% endif %}
                     {% if event.paper_url %}<p><a href="{{ event.paper_url }}" target="_blank">📄 Read the paper</a></p>{% endif %}
                 </div>
                 {% endfor %}
@@ -106,7 +107,8 @@ const eventsData = {
             description: "{{ event.description }}",
             location: "{{ event.location }}",
             time: "{{ event.time }}",
-            type: "{{ event.type }}"
+            type: "{{ event.type }}",
+            registrationUrl: "{{ event.registration_url }}"
         }{% unless forloop.last %},{% endunless %}
         {% endfor %}
     ],
@@ -226,6 +228,7 @@ function showEventDetails(date) {
                 <div class="event-title">${event.title}</div>
                 <p>${event.description}</p>
                 ${event.location ? `<p><strong>Location:</strong> ${event.location}</p>` : ''}
+                ${event.registrationUrl ? `<p><a href="${event.registrationUrl}" target="_blank" style="background: #ff0000; color: white; padding: 8px 16px; border-radius: 20px; text-decoration: none; font-weight: bold;">🎟️ Register on Luma</a></p>` : ''}
                 ${event.paperUrl ? `<p><a href="${event.paperUrl}" target="_blank">📄 Paper discussed</a></p>` : ''}
             </div>
         `;

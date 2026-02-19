@@ -1,0 +1,62 @@
+upcoming:
+  - date: "2025-10-31"
+    end_date: "2025-11-02"
+    title: "AI Safety Hackathon"
+    description: "48-hour hackathon focused on developing predictive models and forecasting methodologies to anticipate AI development timelines and capability advancements."
+    location: "EPFL Campus"
+    type: "hackathon"
+    
+  - date: "2025-11-06"
+    title: "Reading Group #3"
+    description: "Paper discussion session"
+    location: "AI Center Lounge"
+    time: "18:30-20:00"
+    type: "reading_group"
+    
+  - date: "2025-11-20"
+    title: "Reading Group #4"
+    description: "Paper discussion session"
+    location: "AI Center Lounge"
+    time: "18:30-20:00"
+    type: "reading_group"
+    
+  - date: "2025-12-04"
+    title: "Reading Group #5"
+    description: "Paper discussion session"
+    location: "AI Center Lounge"
+    time: "18:30-20:00"
+    type: "reading_group"
+
+  - date: "2025-12-18"
+    title: "Reading Group #6 - End of Semester"
+    description: "Final reading group session before winter break"
+    location: "AI Center Lounge"
+    time: "18:30-20:00"
+    type: "reading_group"
+
+past:
+  - date: "2025-10-08"
+    title: "Reading Group #1"
+    description: "Paper: Chain-of-Thought Is Not Explainability"
+    location: "AI Center Lounge"
+    time: "18:30-20:00"
+    type: "reading_group"
+    paper_url: "https://aigi.ox.ac.uk/wp-content/uploads/2025/07/Cot_Is_Not_Explainability.pdf"
+    
+  - date: "2025-10-22"
+    title: "Reading Group #2"
+    description: "Paper discussion session"
+    location: "AI Center Lounge"
+    time: "18:30-20:00"
+    type: "reading_group"
+
+regular_meetings:
+  - day: "Friday"
+    time: "12:00-13:00"
+    location: "BC Cafeteria"
+    description: "Weekly informal meetups"
+    
+  - day: "Wednesday (bi-weekly)"
+    time: "18:30-20:00"
+    location: "AI Center Lounge"
+    description: "Reading group sessions"

@@ -1,0 +1,164 @@
+---
+layout: default
+title: "Reading Group"
+description: "Join our bi-weekly AI safety reading group at EPFL. Discuss cutting-edge papers in alignment, interpretability, and safety research."
+---
+
+<section class="page-header">
+    <div class="container">
+        <h1>AI Safety Reading Group</h1>
+        <p>Exploring the latest research in AI safety, alignment, and interpretability</p>
+    </div>
+</section>
+
+<main class="container">
+    <section class="section">
+        <h2>About Our Reading Group</h2>
+        <p>Our reading group meets bi-weekly to discuss the latest papers in AI safety, alignment, and related fields. We cover both foundational work and cutting-edge research, providing a platform for deep technical discussions and collaborative learning.</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <h3>📅 Schedule</h3>
+                <p><strong>When:</strong> Every other Wednesday, 18:30-20:00</p>
+                <p><strong>Where:</strong> AI Center Lounge, EPFL</p>
+                <p><strong>Format:</strong> Paper presentations followed by group discussion</p>
+            </div>
+            
+            <div class="card">
+                <h3>📖 Paper Selection</h3>
+                <p>We focus on high-impact papers from top-tier venues like NeurIPS, ICML, ICLR, and specialized AI safety conferences. Members can suggest papers for discussion through our Telegram group.</p>
+            </div>
+            
+            <div class="card">
+                <h3>🎯 Focus Areas</h3>
+                <p><strong>Core Topics:</strong> Interpretability, robustness, alignment, reward modeling, scalable oversight, societal impact</p>
+                <p><strong>Emerging Areas:</strong> Constitutional AI, RLHF, mechanistic interpretability, AI governance</p>
+            </div>
+            
+            <div class="card">
+                <h3>👥 Who Should Join</h3>
+                <p>Students, researchers, and professionals interested in AI safety. All experience levels welcome - from undergraduates curious about the field to PhD students working on related research.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>How to Join</h2>
+        <div style="background: #fff3f3; padding: 2rem; border-radius: 10px; border-left: 4px solid #ff0000; max-width: 800px; margin: 0 auto;">
+            <h3 style="color: #ff0000; margin-top: 0;">Registration Required</h3>
+            <p>To ensure we have enough space and materials, please register using the form below. You'll receive email updates about upcoming sessions, paper selections, and any schedule changes.</p>
+            
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAic5NIrSDg-z8-7EEc2a6ehbipBMnPbQ8eAP1AoIYEtiAAg/viewform?usp=header" target="_blank" class="cta-button">Register Now</a>
+            </div>
+            
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">Already registered? Join our <a href="https://t.me/+5KQ7sfHT51I4Mzhk" target="_blank">Telegram group</a> for discussions and updates.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Upcoming Sessions</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            {% assign reading_group_events = site.data.events.upcoming | where: "type", "reading_group" | sort: 'date' %}
+            {% for event in reading_group_events %}
+            <div class="event-item">
+                <div class="event-date">
+                    {{ event.date | date: "%B %d, %Y" }} • {{ event.time }}
+                </div>
+                <div class="event-title">{{ event.title }}</div>
+                <p>{{ event.description }}</p>
+                <p><strong>Location:</strong> {{ event.location }}</p>
+                {% if event.paper_url %}
+                <p><a href="{{ event.paper_url }}" target="_blank">📄 Read the paper</a></p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Previous Sessions</h2>
+        <p>Catch up on what we've discussed in previous sessions:</p>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+            {% assign past_reading_group = site.data.events.past | where: "type", "reading_group" | sort: 'date' | reverse %}
+            {% for event in past_reading_group %}
+            <div class="event-item" style="opacity: 0.8;">
+                <div class="event-date">
+                    {{ event.date | date: "%B %d, %Y" }}
+                </div>
+                <div class="event-title">{{ event.title }}</div>
+                <p>{{ event.description }}</p>
+                {% if event.paper_url %}
+                <p><a href="{{ event.paper_url }}" target="_blank">📄 Paper: Chain-of-Thought Is Not Explainability</a></p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Suggested Reading</h2>
+        <p>New to AI safety research? Here are some foundational papers and resources to get you started:</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <h3>🌟 Foundational Papers</h3>
+                <ul style="text-align: left;">
+                    <li><a href="https://arxiv.org/abs/1606.06565" target="_blank">Concrete Problems in AI Safety</a> - Amodei et al.</li>
+                    <li><a href="https://arxiv.org/abs/1912.01683" target="_blank">Risks from Learned Optimization</a> - Hubinger et al.</li>
+                    <li><a href="https://arxiv.org/abs/2109.07958" target="_blank">Training language models to follow instructions</a> - Ouyang et al.</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>📚 Key Resources</h3>
+                <ul style="text-align: left;">
+                    <li><a href="https://aisafety.info" target="_blank">AI Safety Info</a> - Comprehensive resource hub</li>
+                    <li><a href="https://www.alignmentforum.org/" target="_blank">Alignment Forum</a> - Research discussions</li>
+                    <li><a href="https://course.aisafetyfundamentals.com/" target="_blank">AI Safety Fundamentals</a> - Online course</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>🔬 Current Trends</h3>
+                <ul style="text-align: left;">
+                    <li>Constitutional AI and RLHF improvements</li>
+                    <li>Mechanistic interpretability techniques</li>
+                    <li>Scalable oversight and AI governance</li>
+                    <li>Robustness and adversarial examples</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Contribute to the Discussion</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>💡 Suggest Papers</h3>
+                <p>Found an interesting paper? Share it in our Telegram group or email us. We're always looking for relevant, high-quality research to discuss.</p>
+            </div>
+            
+            <div class="card">
+                <h3>🎤 Present a Paper</h3>
+                <p>Want to dive deep into a particular paper? Volunteer to present! It's a great way to thoroughly understand the work and share insights with the group.</p>
+            </div>
+            
+            <div class="card">
+                <h3>📝 Discussion Notes</h3>
+                <p>We take collaborative notes during sessions. Access to previous discussions and key insights available to registered members.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Get Involved</h2>
+        <p>Ready to join our AI safety discussions? Whether you're new to the field or an experienced researcher, we welcome diverse perspectives and thoughtful engagement.</p>
+        
+        <div style="text-align: center;">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAic5NIrSDg-z8-7EEc2a6ehbipBMnPbQ8eAP1AoIYEtiAAg/viewform?usp=header" target="_blank" class="cta-button" style="margin: 0 10px;">Register for Reading Group</a>
+            <a href="{{ '/contact/' | relative_url }}" class="cta-button" style="margin: 0 10px;">Join Our Community</a>
+        </div>
+    </section>
+</main>

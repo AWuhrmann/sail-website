@@ -1,0 +1,113 @@
+sail_projects:
+  - title: "OS-Harm"
+    authors: "Thomas Kuntz, Agatha Duzan"
+    lab: "Theory of Machine Learning Laboratory (TML)"
+    description: "Created a harmful capabilities benchmark for agents. Got accepted as a spotlight paper at NeurIPS 2025"
+    arxiv_url: "https://arxiv.org/abs/2506.14866"
+    year: "2025"
+    semester: "Spring"
+    
+  - title: "Watermarking for LLMs"
+    authors: "Joshua Cohen-Dumani"
+    lab: "Natural Language Processing Lab (NLP)"
+    description: "This project explored synthetic text detection in open-source language models by studying whether watermarking patterns can be learned directly through fine-tuning. To do so, we built a research pipeline that generated custom datasets, applied contrastive training, and evaluated detectability using automated and model-based methods. The work contributes to understanding how watermarking could help mitigate misuse and disinformation in widely available LLMs."
+    year: "2025"
+    semester: "Spring"
+    
+  - title: "Toxicity in LLMs"
+    authors: "Léo Gabriel Paoletti"
+    lab: "Natural Language Processing Lab (NLP)"
+    description: "Investigated the existence and cross-model transferability of multilingual prompts that evade toxicity detection yet trigger toxic outputs in LLMs. Benchmarked Apertus and identified limitations in state-of-the-art jailbreak and toxicity detection systems."
+    year: "2025"
+    semester: "Spring"
+    
+  - title: "Memorization in LLMs"
+    authors: "Arthur Wuhrmann"
+    lab: "Natural Language Processing Lab (NLP)"
+    description: "Investigated how perplexity can help to detect verbatim memorization in LLMs output by identifying low-perplexity regions in generated text. We developed an open-source tool for detecting memorization patterns."
+    arxiv_url: "https://arxiv.org/abs/2507.01844"
+    github_url: "https://github.com/Reliable-Information-Lab-HEVS/ACL-2025-Low-perplexity-LLM-generated-sequences"
+    year: "2025"
+    semester: "Spring"
+
+mlo_available_projects:
+  - title: "Large Language Models / Apertus Projects"
+    description: "Several projects around large language models / Apertus"
+    areas:
+      - "Data curation and curriculum learning for pre-training, theory and practice"
+      - "Scaling to longer context windows through modifications of attention"
+      - "Efficiency engineering for LLM pretraining and specifically MoE architectures"
+      - "Finetuning and alignment models on top of pretrained LLMs"
+      - "Tools-usage during pretraining & finetuning"
+      - "Safety and alignment during pretraining"
+      - "Novel architectures (including efficient long context mechanisms)"
+      - "Optimization landscapes for LLMs (e.g. AdEMAmix and Muon variants)"
+    contact: "Apply via the application form"
+    application_url: "https://forms.gle/fvNgDCeLV69k29FA7"
+    
+  - title: "Multilingual Data Curation"
+    description: "This project aims to advance state-of-the-art curation beyond baselines like FineWeb-2 HQ by implementing novel techniques for signal extraction and semantic filtering."
+    areas:
+      - "Novel techniques for signal extraction and semantic filtering"
+      - "Impact of data quality on the 'curse of multilinguality'"
+      - "Relation to scaling laws"
+    contact: "Bettina Messmer and Vinko Sabolčec"
+    application_url: "https://forms.gle/fvNgDCeLV69k29FA7"
+    
+  - title: "Learning to Optimize"
+    description: "Learns an optimizer on the fly by teaching a neural network (for example an RNN) to takes the current raw gradient as input, updates its state, and outputs an improved 'treated' gradient."
+    areas:
+      - "Neural network-based optimization"
+      - "Collaborative learning with multiple agents"
+      - "Gradient processing and improvement"
+    contact: "El Mahdi Chayti"
+    application_url: "https://forms.gle/fvNgDCeLV69k29FA7"
+    
+  - title: "Learning to Sample for SGD / Curriculum Learning"
+    description: "Use an auxiliary network that learns to assign scores to different data points in the training set, then use these scores to select an improved set of training points."
+    areas:
+      - "Auxiliary network training"
+      - "Data point scoring and selection"
+      - "Training set optimization"
+    contact: "El Mahdi Chayti"
+    application_url: "https://forms.gle/fvNgDCeLV69k29FA7"
+    
+  - title: "Landscape Analysis and Second-order Methods"
+    description: "Study the geometry of loss landscapes in deep neural networks and generalization properties of stationary points."
+    areas:
+      - "Loss landscape visualization (2D/3D projections)"
+      - "Sharp vs wide minimum analysis"
+      - "First-order vs cubically regularized Newton trajectories"
+      - "Saddle point region identification"
+    contact: "Nikita Doikov"
+    application_url: "https://forms.gle/fvNgDCeLV69k29FA7"
+    
+  - title: "Improving Factuality Understanding for LLM Training"
+    description: "Add a factuality tag/masking for each document to guide LM's understanding of what is factual and what is not."
+    areas:
+      - "Factuality tagging and masking"
+      - "Reducing LLM hallucinations"
+      - "Post-training techniques"
+    contact: "Dongyang Fan & Diba Hashemi"
+    application_url: "https://forms.gle/fvNgDCeLV69k29FA7"
+    
+  - title: "Build Decentralized ML in the Browser"
+    description: "Join our larger team project to build a decentralized (and federated) training software, where many clients can collaboratively train a joint ML model while respecting data privacy."
+    areas:
+      - "Decentralized training algorithms"
+      - "Federated learning implementation"
+      - "Privacy-preserving techniques"
+      - "JavaScript/browser implementation"
+    contact: "Martin Jaggi"
+    github_url: "https://github.com/epfml/disco"
+    type: "practical"
+    application_url: "https://forms.gle/fvNgDCeLV69k29FA7"
+
+application_process:
+  description: "Students interested in doing a project at the MLO lab should apply through our centralized application form. Priority is given to Master Thesis Projects (full time)."
+  application_url: "https://forms.gle/fvNgDCeLV69k29FA7"
+  requirements:
+    - "Grade sheet may be required if you haven't taken MLO courses"
+    - "Applications accepted at the start of each semester"
+    - "Limited number of projects available each semester"
+  expectations_url: "https://www.epfl.ch/labs/mlo/page-135359-en-html/"

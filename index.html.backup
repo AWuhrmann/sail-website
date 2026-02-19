@@ -20,8 +20,8 @@ description: "Building a safer future through responsible AI development and res
         <div class="cards-grid">
             <div class="card">
                 <h3>📚 Reading Group</h3>
-                <p>We ran successful reading group sessions in Fall 2024 and are planning future sessions based on community interest. Join our interest list to be notified when we restart!</p>
-                <p><a href="{{ '/reading-group/' | relative_url }}">Show interest →</a></p>
+                <p>We host a reading group on EPFL campus every other Wednesday starting October. Discuss the latest papers in AI safety, alignment, and related fields with fellow researchers.</p>
+                <p><a href="{{ '/reading-group/' | relative_url }}">Learn more →</a></p>
             </div>
             
             <div class="card">
@@ -68,7 +68,7 @@ description: "Building a safer future through responsible AI development and res
         <div style="max-width: 800px; margin: 0 auto;">
             {% assign upcoming_events = site.data.events.upcoming | sort: 'date' %}
             {% for event in upcoming_events limit:3 %}
-            <div class="event-item"{% if event.type == 'kickoff' %} style="border-left: 6px solid #ff0000; background: linear-gradient(90deg, #fff3f3, white);"{% endif %}>
+            <div class="event-item">
                 <div class="event-date">
                     {% assign event_date = event.date | date: "%B %d, %Y" %}
                     {% if event.end_date %}
@@ -79,16 +79,9 @@ description: "Building a safer future through responsible AI development and res
                     {% endif %}
                     {% if event.time %} • {{ event.time }}{% endif %}
                 </div>
-                <div class="event-title">{{ event.title }}{% if event.type == 'kickoff' %} 🚀{% endif %}</div>
+                <div class="event-title">{{ event.title }}</div>
                 <p>{{ event.description }}</p>
                 {% if event.location %}<p><strong>Location:</strong> {{ event.location }}</p>{% endif %}
-                {% if event.registration_url %}
-                    <p style="margin-top: 1rem;">
-                        <a href="{{ event.registration_url }}" target="_blank" style="background: #ff0000; color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; display: inline-block;">
-                            🎟️ Register on Luma
-                        </a>
-                    </p>
-                {% endif %}
             </div>
             {% endfor %}
         </div>

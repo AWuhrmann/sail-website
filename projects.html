@@ -1,0 +1,126 @@
+---
+layout: default
+title: "Projects"
+description: "Past SAIL projects and available research opportunities at EPFL MLO Lab for AI safety research."
+---
+
+<section class="page-header">
+    <div class="container">
+        <h1>Research Projects</h1>
+        <p>Explore our past work and discover new research opportunities in AI safety</p>
+    </div>
+</section>
+
+<main class="container">
+    <section class="section">
+        <h2>Past SAIL Projects ({{ site.data.projects.sail_projects[0].semester }} {{ site.data.projects.sail_projects[0].year }})</h2>
+        <p>Our members have contributed to cutting-edge AI safety research through semester projects at various EPFL labs.</p>
+        
+        <div class="cards-grid">
+            {% for project in site.data.projects.sail_projects %}
+            <div class="card">
+                <h3>{{ project.title }}</h3>
+                <p><strong>SAIL Authors:</strong> {{ project.authors }}</p>
+                <p><strong>Lab:</strong> {{ project.lab }}</p>
+                <p>{{ project.description }}</p>
+                <div style="margin-top: 1rem;">
+                    {% if project.arxiv_url %}
+                        <a href="{{ project.arxiv_url }}" target="_blank">📄 ArXiv</a>
+                    {% endif %}
+                    {% if project.github_url %}
+                        {% if project.arxiv_url %} • {% endif %}
+                        <a href="{{ project.github_url }}" target="_blank">💻 Code</a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Available Projects at MLO Lab</h2>
+        <p>The Machine Learning and Optimization (MLO) Lab offers exciting research opportunities in AI safety and related fields. These projects are open to students interested in contributing to cutting-edge research.</p>
+        
+        <div style="background: #fff3f3; padding: 2rem; border-radius: 10px; margin-bottom: 3rem; border-left: 4px solid #ff0000;">
+            <h3 style="color: #ff0000; margin-top: 0;">How to Apply</h3>
+            <p>{{ site.data.projects.application_process.description }}</p>
+            <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+                {% for requirement in site.data.projects.application_process.requirements %}
+                <li>{{ requirement }}</li>
+                {% endfor %}
+            </ul>
+            <p style="text-align: center; margin-top: 2rem;">
+                <a href="{{ site.data.projects.application_process.application_url }}" target="_blank" class="cta-button">Apply Now</a>
+            </p>
+        </div>
+        
+        <div class="cards-grid">
+            {% for project in site.data.projects.mlo_available_projects %}
+            <div class="card">
+                <h3>{{ project.title }}</h3>
+                {% if project.type == "practical" %}
+                    <div style="background: #e6f7ff; padding: 8px 12px; border-radius: 5px; margin-bottom: 1rem; font-size: 0.9rem; color: #0066cc;">
+                        Practical Project
+                    </div>
+                {% endif %}
+                <p>{{ project.description }}</p>
+                
+                {% if project.areas %}
+                <div style="margin: 1rem 0;">
+                    <strong>Focus Areas:</strong>
+                    <ul style="text-align: left; margin: 0.5rem 0;">
+                        {% for area in project.areas limit:4 %}
+                        <li>{{ area }}</li>
+                        {% endfor %}
+                        {% if project.areas.size > 4 %}
+                        <li><em>...and more</em></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                {% endif %}
+                
+                <div style="margin-top: 1rem; border-top: 1px solid #eee; padding-top: 1rem;">
+                    <p><strong>Contact:</strong> {{ project.contact }}</p>
+                    <div>
+                        <a href="{{ project.application_url }}" target="_blank">📝 Apply</a>
+                        {% if project.github_url %}
+                        • <a href="{{ project.github_url }}" target="_blank">💻 GitHub</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Interdisciplinary Opportunities</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <h3>Cross-Lab Collaborations</h3>
+                <p>We're open to interdisciplinary projects with other organizations (Academic, NGOs, Industry). We frequently collaborate with <a href="https://www.light-laboratory.org/" target="_blank">EPFL's Light Lab</a> and other research groups.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Industry Partnerships</h3>
+                <p>Interested in working on real-world AI safety challenges? We welcome partnerships with industry for practical applications of AI safety research.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Propose Your Own</h3>
+                <p>Have an AI safety research idea? We're always excited to hear from students with their own project proposals that align with our mission.</p>
+                <p><a href="{{ '/contact/' | relative_url }}">Get in touch →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Get Involved</h2>
+        <p>Ready to contribute to AI safety research? Whether you're interested in our reading group, want to apply for a project, or just want to connect with our community, we'd love to hear from you.</p>
+        
+        <div style="text-align: center;">
+            <a href="{{ '/contact/' | relative_url }}" class="cta-button" style="margin: 0 10px;">Join Our Community</a>
+            <a href="{{ site.data.projects.application_process.application_url }}" target="_blank" class="cta-button" style="margin: 0 10px;">Apply for Projects</a>
+        </div>
+    </section>
+</main>

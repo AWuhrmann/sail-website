@@ -1,0 +1,56 @@
+upcoming:
+  - date: "2026-03-05"
+    title: "SAIL Spring 2026 Kickoff"
+    description: "Join us for the official kickoff of our Spring 2026 activities! Meet the team, learn about upcoming projects and opportunities, and connect with fellow AI safety enthusiasts."
+    location: "Room CE 1 104, EPFL"
+    time: "18:30"
+    type: "kickoff"
+    registration_url: "https://luma.com/event/manage/evt-gYX0pFffKH5bBVB"
+
+past:
+  - date: "2025-12-10"
+    title: "Reading Group #6"
+    description: "Paper: Strong Model Collapse (ICML '25)"
+    location: "EPFL Campus"
+    time: "18:30-20:00"
+    type: "reading_group"
+    
+  - date: "2025-11-26"
+    title: "Reading Group #5"
+    description: "Paper: Utility Engineering-Analyzing and Controlling Emergent Value Systems in AIs ('25)"
+    location: "CM09, EPFL"
+    time: "18:30"
+    type: "reading_group"
+    
+  - date: "2025-11-12"
+    title: "Reading Group #4"
+    description: "Paper: Stress Testing Deliberative Alignment for Anti-Scheming Training ('25)"
+    location: "CM09, EPFL"
+    time: "18:30"
+    type: "reading_group"
+    
+  - date: "2025-10-29"
+    title: "Reading Group #3"
+    description: "Paper: Detecting Pretraining Data from Large Language Models (ICLR '24)"
+    location: "CO019, EPFL"
+    time: "18:30"
+    type: "reading_group"
+    
+  - date: "2025-10-08"
+    title: "Reading Group #1"
+    description: "Paper: Chain-of-Thought Is Not Explainability"
+    location: "CO-0XX (underground level), EPFL"
+    time: "18:30"
+    type: "reading_group"
+    paper_url: "https://aigi.ox.ac.uk/wp-content/uploads/2025/07/Cot_Is_Not_Explainability.pdf"
+
+regular_meetings:
+  - day: "Friday"
+    time: "12:00-13:00"
+    location: "BC Cafeteria"
+    description: "Weekly informal meetups"
+
+reading_group_interest:
+  status: "gathering_interest"
+  description: "We ran successful reading group sessions in Fall 2024 and are gauging interest for future sessions. If there's enough interest, we'll restart in the coming semester."
+  interest_form_url: "https://docs.google.com/forms/d/e/1FAIpQLSeAic5NIrSDg-z8-7EEc2a6ehbipBMnPbQ8eAP1AoIYEtiAAg/viewform?usp=header"

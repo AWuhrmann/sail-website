@@ -1,0 +1,52 @@
+# EPFL Safe AI Lausanne Website
+title: "EPFL Safe AI Lausanne"
+description: "Building a safer future through responsible AI development and research at EPFL"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://sail.epfl.ch" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# SEO settings
+author: "EPFL Safe AI Lausanne"
+twitter:
+  username: sail_epfl
+social:
+  name: "EPFL Safe AI Lausanne"
+  links:
+    - https://t.me/+5KQ7sfHT51I4Mzhk
+    - https://www.linkedin.com/company/safe-ai-lausanne/
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

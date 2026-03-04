@@ -1,6 +1,6 @@
 # EPFL Safe AI Lausanne Website
 
-This is the Jekyll-based website for EPFL Safe AI Lausanne (SAIL).
+This is the Jekyll-based website for Safe AI Lausanne (SAIL).
 
 ## Development
 
@@ -14,12 +14,15 @@ This is the Jekyll-based website for EPFL Safe AI Lausanne (SAIL).
 ### Updating Content
 
 #### Events
+
 Edit `_data/events.yml` to add/modify events. The calendar will automatically update.
 
-#### Projects  
+#### Projects
+
 Edit `_data/projects.yml` to add new SAIL projects or update MLO lab opportunities.
 
 #### Pages
+
 Regular pages are in the root directory (about.html, projects.html, etc.)
 
 ### GitHub Pages
@@ -40,3 +43,4 @@ This site is configured to work with GitHub Pages automatically. Just push to th
 - Dynamic content from YAML files
 - SEO optimized with Jekyll SEO Tag
 - Automatic sitemap generation
+

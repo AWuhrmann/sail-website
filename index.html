@@ -95,18 +95,12 @@ description: "Building a safer future through responsible AI development and res
       for event in upcoming_events limit:3 %}
       <div
         class="event-item"
-        {%
-        if
-        event.type=""
-        ="kickoff"
-        %}
+        {% if event.type == "kickoff" %}
         style="
           border-left: 6px solid #ff0000;
           background: linear-gradient(90deg, #fff3f3, white);
         "
-        {%
-        endif
-        %}
+        {% endif %}
       >
         <div class="event-date">
           {% assign event_date = event.date | date: "%B %d, %Y" %} {% if
